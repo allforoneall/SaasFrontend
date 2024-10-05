@@ -6,7 +6,7 @@ const AddMovieModal = () => {
     const [date,setDate] = useState('')
     const postMovie = async () =>{
         try {
-            const res = await fetch('/api/movies', {
+            const res = await fetch('https://saasmovierevier-1.onrender.com/api/movies', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
