@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
+export const BACKEND_URL= "https://saasmovierevier-1.onrender.com"
 const AddMovieModal = () => {
     const [name,setName] = useState('')
     const [date,setDate] = useState('')
     const postMovie = async () =>{
         try {
-            const res = await fetch('https://saasmovierevier-1.onrender.com/api/movies', {
+            const res = await fetch(`${BACKEND_URL}/api/movies`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',

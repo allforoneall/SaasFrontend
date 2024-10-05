@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react'
 import {fetchMovie} from '../../utils/api.js'
+import { BACKEND_URL } from './AddMovieModal.js'
 
 const AddReviewModal = () => {
   const [movies,setMovies] = useState([])
@@ -20,7 +21,7 @@ const AddReviewModal = () => {
   const submitReview = async () =>{
     console.log(payload)
     try {
-      const res = await fetch('/api/reviews', {
+      const res = await fetch(`${BACKEND_URL}/api/reviews`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
